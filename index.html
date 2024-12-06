@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMGSS E-Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#frontend-tools">Frontend Tools</a></li>
+        <li><a href="#video-section">Videos</a></li>
+        <li><a href="#practice-section">Practice</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+        <li><a href="test2.html">Go to Test2 Page</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+      <h1>🅦🅔🅛🅒🅞🅜🅔 🅣🅞 🅚🅔🅡🅐🅝🅘🅨🅞 🅔.🅛🅔🅐🅝🅘🅝🅖 🅟🅛🅐🅣🅕🅞🅡🅜</h1>
+      <h2>𝕙𝕖𝕝𝕝𝕠 𝕤𝕥𝕦𝕕𝕖𝕟𝕥𝕤 𝕥𝕙𝕚𝕤 𝕨𝕖𝕓𝕤𝕚𝕥𝕖 𝕕𝕖𝕧𝕖𝕝𝕠𝕡𝕖𝕕 𝕓𝕪 𝕜𝕖𝕣𝕒𝕟𝕚𝕪𝕠 𝕞𝕖𝕕𝕙𝕒𝕟𝕚𝕒𝕕𝕖𝕝𝕖𝕞</h2>
+      <p>𝙨𝙩𝙪𝙙𝙚𝙣𝙩𝙨,𝙞𝙣 𝙩𝙝𝙞𝙨 𝙬𝙚𝙗𝙨𝙞𝙩𝙚,𝙮𝙤𝙪 𝙚𝙭𝙥𝙡𝙤𝙧𝙚 𝙛𝙧𝙤𝙣𝙩𝙚𝙣𝙙 𝙖𝙣𝙙 𝙗𝙖𝙘𝙠𝙚𝙣𝙙 𝙙𝙚𝙫𝙚𝙡𝙤𝙥𝙢𝙚𝙣𝙩</p>
+    </section>
+
+    <!-- Login Form Section -->
+    <div class="form-container">
+        <p class="title">Login</p>
+        <form class="form" method="POST" action="login.php">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="">
+                <div class="forgot">
+                    <a href="#">Forgot Password ?</a>
+                </div>
+            </div>
+            <button class="sign" type="submit">Sign in</button>
+        </form>
+    </div>
+
+    <!-- Video Section -->
+    <section id="video-section">
+      <h1>Video for Beginners</h1>
+      <video id="beginner-video" width="100%" height="500" controls>
+        <source src="videoplayback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Frontend Tools Section -->
+    <section id="frontend-tools">
+      <h2>Frontend Tools</h2>
+      <img src="isru2.jpg" alt="frontend" class="image1">
+      <h3>CSS</h3>
+      <img src="background.jpg" alt="CSS Tool" class="image2">
+      <h4>JavaScript</h4>
+      <img src="javascript.jpg" alt="JavaScript Tool" class="image3">
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const authContainer = document.querySelector('.auth-container');
+        const signInBtn = document.querySelector('.sign-in-btn');
+        const signUpBtn = document.querySelector('.sign-up-btn');
+
+        // Switch to Sign Up form
+        signUpBtn.addEventListener('click', () => {
+          authContainer.classList.add('show-sign-up');
+        });
+
+        // Switch to Sign In form
+        signInBtn.addEventListener('click', () => {
+          authContainer.classList.remove('show-sign-up');
+        });
+      });
+    </script>
+  </body>
+</html>

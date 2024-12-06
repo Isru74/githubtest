@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Courses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome, {{ current_user.username }}!</h1>
+    <p>Select a course to begin:</p>
+    <ul>
+        <li><a href="{{ url_for('course', course_name='frontend') }}">Frontend Course</a></li>
+        <li><a href="{{ url_for('course', course_name='backend') }}">Backend Course</a></li>
+    </ul>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
